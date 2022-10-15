@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body{
+                background-color: #0c3a98;
+                padding: 30px;
+                box-sizing: border-box;
+            }
+            .status{
+                color: white;
+            }
+            
+            .jumlah{
+                color: white;
+            }
+            
+            .wrap-back{   
+                width: 70px;
+                text-align: center;                
+                
+            }
+            
+            .back{
+                text-decoration: none;
+                color: white;
+                background-color:#f6016a;
+                padding: 10px;
+                
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1 class="status">
+            <h:outputText value="#{atmController.responeSetorTunai}"/>
+        </h1>
+        <h5 class="jumlah">
+            <h:outputText value="Jumlah uang yang kamu setor : Rp.#{atmController.jumlah},00"/>
+        </h5>
+        
+        <h:form class="wrap-back">
+            <h:commandLink  class="back" value = "Back" action = "index" />   
+        </h:form>
+    </h:body>
+</html>
